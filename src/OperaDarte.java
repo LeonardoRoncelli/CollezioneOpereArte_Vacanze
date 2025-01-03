@@ -1,20 +1,18 @@
-public class OperaDarte {
-    private String artista;
+public abstract class OperaDarte {
     private String titolo;
-    public OperaDarte(String artista,String titolo){
-        this.artista=artista;
-        this.titolo=titolo;
+    private String artista;
+    public OperaDarte(String titolo, String artista) {
+        this.titolo = titolo;
+        this.artista = artista;
     }
-    public void setArtista(String artista){
-        this.artista=artista;
+    public abstract double ingombro();
+    public String toString() {
+        return "OperaDarte: " + titolo + ", artista: " + artista;
     }
-    public String getArtista(){
-        return artista;
-    }
-    public void setTitolo(String titolo){
-        this.titolo=titolo;
-    }
-    public String getTitolo(){
+    public String getTitolo() {
         return titolo;
+    }
+    public String getArtista() {
+        return artista;
     }
 }
